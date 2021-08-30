@@ -1,7 +1,6 @@
 let arrType = new Set();
 let nameSearch = "";
 let searchInput = document.querySelector(".search-input");
-let form = document.querySelector(".search form");
 let data_posts = document.querySelectorAll(".post");
 let posts = document.querySelectorAll(".post");
 // console.log(projectItem);
@@ -34,9 +33,8 @@ for (i = 0; i < filterTypeEle.length; i++) {
     show();
   });
 }
-// console.log("namesearch:" + nameSearch);
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+
+searchInput.addEventListener("keyup", function (e) {
   nameSearch = searchInput.value.toUpperCase();
   console.log(nameSearch);
   show();

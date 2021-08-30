@@ -69,6 +69,6 @@ if(isset($hero_title)){
 
 
             </div>
-            <div class="search"><form action="#" method="get"><input class="search-input text" placeholder="Search..."></input></form></div>
+            <div class="search"><input class="search-input text" placeholder="Search..."></input></div>
         </div>
     </section>

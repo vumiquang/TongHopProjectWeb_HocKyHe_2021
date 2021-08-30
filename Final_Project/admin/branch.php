@@ -34,11 +34,28 @@
     <div class="container title">
         <h1 class="text-center">Quản lý thương hiệu liên kết</h1>
       </div>
+      <div class="container">
+        <div class="search position-relative">
+              <div style="width:200px;">
+                <div class="form-group">
+                  <label>Tên thương hiệu</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name_project"
+                    placeholder="Tên thương hiệu ..."
+                    name="name"
+                  />
+                </div>
+              </div>
+            </div>
+    </div>
     <div class="container">
         <div class="search position-relative">
               <div class="position-absolute" style="bottom: 0; right:0;"><a href="./form_add_branch.php" class="btn btn-primary">Thêm thương hiệu</a></div>
         </div>
     </div>
+
     <div class="container">
       <table class="table table-hover table-bordered">
         <thead>
@@ -86,29 +103,22 @@
     <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script>
-    const btnSearch  = document.querySelector(".btn-search");
+    const inputSearch  = document.querySelector("input[name=name]");
    
-    btnSearch.addEventListener('click',search);
+    inputSearch.addEventListener('keyup',search);
     function search(e){
         e.preventDefault();
 
-        let inputName = document.querySelector("input[name=name]").value.toUpperCase();
+        let inputName = inputSearch.value.toUpperCase();
       
         let table = document.getElementById("myTable");
         let tr = table.getElementsByTagName("tr");
-        // console.log(table);
+        console.log(table);
         for (i = 0; i < tr.length; i++) {
-            let r1 = tr[i].querySelectorAll("td")[0];
-            let r2 = tr[i].querySelectorAll("td")[1];
-            let r3 = tr[i].querySelectorAll("td")[2];
-            let r4 = tr[i].querySelectorAll("td")[3];
-            let txt1 =  r1.textContent || r1.innerText;
-            let txt2 =  r2.textContent || r2.innerText;
-            let txt3 =  r3.textContent || r3.innerText;
-            let txt4 =  r4.textContent || r4.innerText;
-
-            let txtName = txt1.concat(txt2,txt3,txt4);
-        //  console.log( txtName );
+            let tdName = tr[i].querySelectorAll("td")[0];
+            let txtName =  tdName.textContent || tdName.innerText;
+            console.log( txtName );
+          
             if ( txtName.toUpperCase().indexOf(inputName) > -1) {
                 tr[i].style.display = "";
                 console.log(1);

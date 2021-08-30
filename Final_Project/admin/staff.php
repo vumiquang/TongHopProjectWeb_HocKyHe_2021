@@ -34,6 +34,22 @@
     <div class="container title">
         <h1 class="text-center">Quản lý nhân viên</h1>
       </div>
+      <div class="container">
+        <div class="search position-relative">
+              <div style="width:200px;">
+                <div class="form-group">
+                  <label>Tên nhân viên</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name_project"
+                    placeholder="Tên nhân viên ..."
+                    name="name"
+                  />
+                </div>
+              </div>
+            </div>
+    </div>
     <div class="container">
         <div class="search position-relative">
               <div class="position-absolute" style="bottom: 0; right:0;"><a href="./form_add_staff.php" class="btn btn-primary">Thêm nhân viên</a></div>
@@ -88,6 +104,33 @@
     </div>
     <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
+    <script>
+    const inputSearch  = document.querySelector("input[name=name]");
+   
+    inputSearch.addEventListener('keyup',search);
+    function search(e){
+        e.preventDefault();
+
+        let inputName = inputSearch.value.toUpperCase();
+      
+        let table = document.getElementById("myTable");
+        let tr = table.getElementsByTagName("tr");
+        console.log(table);
+        for (i = 0; i < tr.length; i++) {
+            let tdName = tr[i].querySelectorAll("td")[0];
+            let txtName =  tdName.textContent || tdName.innerText;
+            console.log( txtName );
+          
+            if ( txtName.toUpperCase().indexOf(inputName) > -1) {
+                tr[i].style.display = "";
+                console.log(1);
+            } else {
+                console.log(2);
+                tr[i].style.display = "none";
+            }
+        }
+    }
+    </script>
     <!-- <script>
     const btnSearch  = document.querySelector(".btn-search");
    

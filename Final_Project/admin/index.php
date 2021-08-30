@@ -36,7 +36,7 @@
       </div>
     <div class="container">
         <div class="search position-relative">
-              <form>
+              <div style="width:200px;">
                 <div class="form-group">
                   <label>Tên dự án</label>
                   <input
@@ -47,8 +47,7 @@
                     name="name"
                   />
                 </div>
-                <button type="submit" class="btn btn-primary btn-search">Tìm kiếm</button>
-              </form>
+              </div>
               <div class="position-absolute" style="bottom: 0; right:0;"><a href="./form_add_project.php" class="btn btn-primary">Thêm dự án</a></div>
             </div>
     </div>
@@ -130,13 +129,13 @@
     <script src="../assets/js/jquery-3.2.1.slim.min.js"></script>
     <script src="../assets/js/bootstrap.min.js"></script>
     <script>
-    const btnSearch  = document.querySelector(".btn-search");
+    const inputSearch  = document.querySelector("input[name=name]");
    
-    btnSearch.addEventListener('click',search);
+    inputSearch.addEventListener('keyup',search);
     function search(e){
         e.preventDefault();
 
-        let inputName = document.querySelector("input[name=name]").value.toUpperCase();
+        let inputName = inputSearch.value.toUpperCase();
       
         let table = document.getElementById("myTable");
         let tr = table.getElementsByTagName("tr");

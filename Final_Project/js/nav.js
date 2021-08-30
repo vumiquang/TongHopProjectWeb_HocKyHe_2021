@@ -66,8 +66,7 @@ toggleBtn.onclick = () => {
 
 // Open contact us
 const btnClose = document.querySelector(".btn-close-contact");
-console.log(btnClose);
-console.log(1111);
+
 btnClose.onclick = () => {
   document.querySelector(".contact-us").classList.remove("active");
 };

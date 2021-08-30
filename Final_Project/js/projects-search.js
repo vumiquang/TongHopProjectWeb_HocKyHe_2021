@@ -2,7 +2,6 @@ let arrType = new Set();
 let arrStatus = new Set();
 let nameSearch = "";
 let searchInput = document.querySelector(".search-input");
-let form = document.querySelector(".search form");
 let projectInfoEle = document.querySelectorAll(".project-info");
 let projectItem = document.querySelectorAll(".project-item");
 // console.log(projectItem);
@@ -53,9 +52,15 @@ for (i = 0; i < filterTypeEle.length; i++) {
     show();
   });
 }
-console.log("namesearch:" + nameSearch);
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
+// console.log("namesearch:" + nameSearch);
+// form.addEventListener("submit", function (e) {
+//   e.preventDefault();
+//   nameSearch = searchInput.value.toUpperCase();
+//   console.log(nameSearch);
+//   show();
+// });
+
+searchInput.addEventListener("keydown", function (e) {
   nameSearch = searchInput.value.toUpperCase();
   console.log(nameSearch);
   show();
