@@ -1,0 +1,84 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+a,
+a:hover {
+  text-decoration: none;
+  cursor: pointer !important;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  width: 100%;
+  overflow-x: hidden;
+  background: #fff;
+  position: relative;
+}
+
+input,
+button,
+select,
+textarea {
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+input {
+  line-height: normal;
+}
+
+button {
+  cursor: pointer;
+}
+:root {
+  --font-size-1: 35px;
+  --font-size-2: 17px;
+  --font-size-3: 14px;
+  --gray-dark: #4c4d4f;
+  --gray-light: #666666;
+  --blue: #0097dd;
+}
+.title {
+  font-size: var(--font-size-2);
+  text-transform: uppercase;
+  padding: 20px;
+  color: var(--blue);
+  font-weight: 700;
+}
+.search form {
+  width: 30%;
+  margin-bottom: 20px;
+}
+.label-type {
+  background-color: #5bc0de;
+}
+.label-status {
+  background-color: #dd0000;
+}
+.label {
+  display: inline;
+  padding: 0.2em 0.6em 0.3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+  margin: 0 2px;
+}

@@ -1,0 +1,60 @@
+.bread-crum .row {
+  padding-top: 100px;
+  color: #ccc;
+  font-size: var(--font-size-4);
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.news-detail {
+  color: var(--gray-light);
+  padding-bottom: 80px;
+  border-bottom: 1px solid #ccc;
+}
+.news-detail h1 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.news-time {
+  font-size: var(--font-size-3);
+  font-weight: 200;
+}
+.news-content {
+  text-align: left;
+  font-size: var(--font-size-4);
+  line-height: 1.6;
+}
+.news-detail .wrap-940 {
+  display: flex;
+}
+.news-detail .wrap-940 > div:first-child {
+  width: 75%;
+  padding-right: 40px;
+}
+.news-detail .wrap-940 > div:last-child {
+  width: 25%;
+}
+.news-title {
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--gray-dark);
+  padding-bottom: 20px;
+}
+.relative-news .wrap-940 > div {
+  width: 75%;
+}
+.relative-news .posts {
+  width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 767px) {
+  .news-detail .wrap-940 {
+    flex-direction: column;
+  }
+  .news-detail .wrap-940 > div,
+  .relative-news .wrap-940 > div {
+    width: 100% !important;
+  }
+}
+@media only screen and (max-width: 480px) {
+}
